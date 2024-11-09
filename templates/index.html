@@ -3,13 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+    <title>Consciencia Ambiental</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Estilos básicos y ambientales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaf2e3;
+            color: #2f4f4f;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2f4f4f;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #4caf50;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #2f4f4f;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .cta a {
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+            padding: 0.7rem 1.5rem;
+            border: 2px solid #4caf50;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #4caf50;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to my Flask App</h1>
-    <h1>by gosorio Arreglado3</h1>
-    <p>This is the index page.</p>
-    <a href="{{ url_for('about') }}">About Us</a>
+    <header>
+        <h1>Consciencia Ambiental</h1>
+        <p>Juntos podemos hacer la diferencia para proteger nuestro planeta</p>
+    </header>
+
+    <nav>
+        <a href="{{ url_for('home') }}">Inicio</a>
+        <a href="{{ url_for('about') }}">Sobre Nosotros</a>
+        <a href="{{ url_for('contact') }}">Contacto</a>
+        <a href="{{ url_for('actions') }}">Acciones Verdes</a>
+    </nav>
+
+    <section>
+        <h2>Bienvenido a Nuestra Iniciativa Ambiental</h2>
+        <p>En Consciencia Ambiental, creemos que cada pequeño cambio puede contribuir a la protección del medio ambiente. Nuestro objetivo es crear una comunidad de personas comprometidas con el cuidado de nuestro planeta.</p>
+        <p>Explora nuestras acciones, conoce más sobre cómo puedes contribuir, y únete a nosotros en este viaje hacia un futuro más verde y sostenible.</p>
+        
+        <div class="cta">
+            <a href="{{ url_for('join') }}">Únete a la Causa</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Consciencia Ambiental. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
